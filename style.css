@@ -96,6 +96,11 @@ header {
   transition: all ease-in-out 0.5s;
 }
 
+.evaluation-select-area {
+  border-bottom: 5px solid gray;
+  position: relative;
+}
+
 .evaluation-form-input:hover , .evaluation-select-area:hover {
   border-bottom-color: rgb(100, 44, 169);
 }
@@ -108,11 +113,6 @@ header {
   outline: none;
   margin-bottom: 5px;
   width: 100%;
-}
-
-.evaluation-select-area {
-  border-bottom: 5px solid gray;
-  position: relative;
 }
 
 .evaluation-select-area:before , .evaluation-select-area:after {
