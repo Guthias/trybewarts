@@ -12,7 +12,7 @@ header {
   justify-content: space-between;
 }
 
-.header-login-area {
+.trybewarts-login {
   display: flex;
   align-items: stretch;
   flex-basis: 700px;

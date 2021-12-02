@@ -8,9 +8,9 @@ function checkLogin(event) {
   const password = passwordLoginInput.value;
 
   if (email === 'tryber@teste.com' && password === '123456') {
-    alert('Olá, Tryber');
+    alert('Olá, Tryber!');
   } else {
-    alert('Email ou senha invalidos');
+    alert('Email ou senha inválidos.');
   }
 }
 
