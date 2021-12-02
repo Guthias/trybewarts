@@ -9,4 +9,38 @@ header {
   background-color: rgb(50, 167, 145);
   height: 100px;
   padding: 10px;
+  justify-content: space-between;
+}
+
+.header-login-area {
+  display: flex;
+  align-items: stretch;
+  flex-basis: 700px;
+  flex-direction: row;
+  gap: 10px;
+  padding: 20px;
+}
+
+.header-input {
+  font-size: 22px;
+  width: 100%;
+  padding: 5px 10px;
+  border-radius: 12px;
+}
+
+.header-button {
+  font-size: 20px;
+  padding: 5px 15px;
+  cursor: pointer;
+  background-color: rgb(100, 44, 169);
+  border: none;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.2s;
+  border-radius: 12px;
+}
+
+.header-button:hover {
+  background-color: rgb(62, 23, 109);
 }
