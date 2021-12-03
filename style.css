@@ -151,3 +151,7 @@ header {
 .evaluation-select-area:hover:after {
   background-color: rgb(62, 23, 109);
 }
+
+.evaluation-form-input-radio {
+  margin-right: 10px;
+}
