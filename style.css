@@ -91,6 +91,14 @@ header {
   width: 100%;
 }
 
+.evaluation-form-avaliation-area {
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  width: 100%;
+}
+
 .evaluation-form-label {
   margin-bottom: 10px;
 }
