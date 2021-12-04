@@ -102,6 +102,7 @@ header {
 .avaliton-input-area {
   display: flex;
   flex-direction: row;
+  align-items: center;
 }
 
 .avaliation-input-box {
@@ -139,6 +140,11 @@ header {
 
 .evaluation-form-label {
   margin-bottom: 10px;
+}
+
+.avaliation-label {
+  text-align: center;
+  margin-right: 10px;
 }
 
 .evaluation-form-input {
