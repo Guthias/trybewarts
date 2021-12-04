@@ -99,6 +99,44 @@ header {
   width: 100%;
 }
 
+.avaliton-input-area {
+  display: flex;
+  flex-direction: row;
+}
+
+.avaliation-input-box {
+  flex: 1 1 0;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  text-align: center;
+  line-height: 40px;
+  outline: 1px solid black;
+}
+
+.avaliation-input-box input {
+  position: absolute;
+  border: none;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkmark {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  transition: all ease-in-out 0.2s;
+}
+
+.avaliation-input-box input:checked ~ .checkmark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(100, 44, 169);
+  color: white;
+}
+
 .evaluation-form-label {
   margin-bottom: 10px;
 }
