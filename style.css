@@ -220,3 +220,10 @@ header {
   height: 50px;
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(50, 167, 145);
+  padding: 50px;
+}
+

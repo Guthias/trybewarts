@@ -15,3 +15,10 @@ function checkLogin(event) {
 }
 
 buttonLogin.addEventListener('click', checkLogin);
+
+const clickCheckbox = document.getElementById('label-infos');
+const buttonSend = document.getElementById('submit-btn');
+
+function click() {
+  rbjgjrkjgbrbr
+}
