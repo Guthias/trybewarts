@@ -160,7 +160,7 @@ header {
   background-color: gray;
   transition: all ease-in-out 0.2s;
   z-index: 1000;
-  top: 14px;
+  top: 26px;
 }
 
 .evaluation-select-area:before {
@@ -204,7 +204,10 @@ footer {
   display: flex;
   justify-content: center;
   background-color: rgb(50, 167, 145);
-  padding: 50px;
+  padding: 30px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 .evaluation-button {
