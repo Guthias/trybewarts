@@ -36,7 +36,7 @@ function getSelectedRadio(name) {
 }
 
 function getSelectedCheckboxes(name) {
-  const checkboxes = document.querySelector(`input[name=${name}]:checked`);
+  const checkboxes = document.querySelectorAll(`input[name=${name}]:checked`);
   const values = [];
 
   if (!checkboxes) {
@@ -45,7 +45,6 @@ function getSelectedCheckboxes(name) {
   for (let i = 0; i < checkboxes.length; i += 1) {
     values.push(checkboxes[i].value);
   }
-
   return values;
 }
 
@@ -69,15 +68,17 @@ function clearForm() {
 
 function createDataList(data) {
   const dataItem = document.createElement('li');
-  dataItem.innerText = `${data[0]}: ${data[1]}`;
-
+  if (Array.isArray(data[1])) {
+    dataItem.innerText = `${data[0]}: ${data[1].join(', ')}`;
+  } else {
+    dataItem.innerText = `${data[0]}: ${data[1]}`;
+  }
   return dataItem;
 }
 
 function renderData(data) {
   const dataKeys = Object.keys(data);
   const dataList = document.createElement('ul');
-
   for (let i = 0; i < dataKeys.length; i += 1) {
     dataList.appendChild(createDataList(data[dataKeys[i]]));
   }
