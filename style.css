@@ -229,7 +229,7 @@ footer {
 }
 
 
-.checkbox-area {
+.checkbox-area , .radio-area {
   padding-left: 30px;
   display: flex;
   flex-direction: row;
@@ -239,7 +239,7 @@ footer {
   cursor: pointer;
 }
 
-.checkbox-area input , .avaliation-input-box input {
+.checkbox-area input , .avaliation-input-box input , .radio-area input {
   position: absolute;
   border: none;
   width: 1px;
@@ -262,6 +262,18 @@ footer {
   margin-right: 8px;
   position: absolute;
   left: 0;
+  transition: all ease-in-out 0.2s;
+}
+
+.radio-area .checkmark {
+  width: 22px;
+  height: 22px;
+  border: 1px solid black;
+  margin-right: 8px;
+  position: absolute;
+  left: 0;
+  transition: all ease-in-out 0.2s;
+  border-radius: 50%;
 }
 
 .checkbox-area input:checked ~ .checkmark:before {
@@ -276,7 +288,20 @@ footer {
   transform: translate(-50% -50%);
 }
 
-.checkbox-area:hover .checkmark , .avaliation-input-box {
+.radio-area input:checked ~ .checkmark:before {
+  content: '';
+  background-color: white;
+  display: block;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  transform: translate(-50% -50%);
+  border-radius: 50%;
+}
+
+.checkbox-area:hover .checkmark , .avaliation-input-box , .radio-area:hover .checkmark {
   background-color: rgb(169, 105, 248);
 }
 
@@ -286,6 +311,10 @@ footer {
   position: absolute;
   background-color: rgb(100, 44, 169);
   color: white;
+}
+
+.radio-area input:checked ~ .checkmark {
+  background-color: rgb(100, 44, 169);
 }
 
 .checkbox-area input:checked ~ .checkmark {

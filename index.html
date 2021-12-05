@@ -58,14 +58,22 @@
 
       <div class="evaluation-form-input-area">
         <label id="label-family" class="evaluation-form-label">Qual sua família?</label>
-        <label>
-          <input type="radio" name="family" value="Frontend" class="evaluation-form-input-radio">Front-End
+        <label class="radio-area">
+          <input type="radio" name="family" value="Frontend" class="evaluation-form-input-radio">
+          <div class="checkmark"></div>
+          Front-End
         </label>
-        <label>
-          <input type="radio" name="family" value="Backend" class="evaluation-form-input-radio">Back-End
+
+        <label class="radio-area">
+          <input type="radio" name="family" value="Backend" class="evaluation-form-input-radio">
+          <div class="checkmark"></div>
+          Back-End
         </label>
-        <label>
-          <input type="radio" name="family" value="FullStack" class="evaluation-form-input-radio">Full-Stack
+
+        <label class="radio-area">
+          <input type="radio" name="family" value="FullStack" class="evaluation-form-input-radio">
+          <div class="checkmark"></div>
+          Full-Stack
         </label>
       </div>
 
@@ -73,33 +81,33 @@
         <label id="label-content" class="evaluation-form-label">Qual conteúdo você está com mais vontade de aprender?</label>
         
         <label class="checkbox-area">
-          <div class="checkmark"></div>
           <input type="checkbox" class="subject" name="subject" value="HoFs" class="evaluation-form-input-checkbox">HoFs
+          <div class="checkmark"></div>
         </label>
 
         <label class="checkbox-area">
-          <div class="checkmark"></div>
           <input type="checkbox" class="subject" name="subject" value="Jest" class="evaluation-form-input-checkbox" >Jest
+          <div class="checkmark"></div>
         </label>
 
         <label class="checkbox-area">
-          <div class="checkmark"></div>
           <input type="checkbox" class="subject" name="subject" value="Promises" class="evaluation-form-input-checkbox">Promises
+          <div class="checkmark"></div>
         </label>
 
         <label class="checkbox-area">
-          <div class="checkmark"></div>
           <input type="checkbox" class="subject" name="subject" value="React" class="evaluation-form-input-checkbox">React
+          <div class="checkmark"></div>
         </label>
 
         <label class="checkbox-area">
-          <div class="checkmark"></div>
           <input type="checkbox" class="subject" name="subject" value="SQL" class="evaluation-form-input-checkbox">SQL
+          <div class="checkmark"></div>
         </label>
 
         <label class="checkbox-area">
-          <div class="checkmark"></div>
           <input type="checkbox" class="subject" name="subject" value="Python" class="evaluation-form-input-checkbox">Python
+          <div class="checkmark"></div>
         </label>
       </div>
 
@@ -158,12 +166,12 @@
           </label>
         </div>
       </div>
+
       <div class="evaluation-form-input-area">
         <label class="textarea evaluation-form-label">Deixe seu comentário:</label>
-          <div>
-            <textarea id="textarea" class="evaluation-form-textarea" maxlength="500"></textarea>
-            <p>Caracteres restantes: <span id="counter">500</span></p>
-          </div>
+        <div>
+          <textarea id="textarea" class="evaluation-form-textarea" maxlength="500"></textarea>
+          <p>Caracteres restantes: <span id="counter">500</span></p>
         </div>
       </div>
 
