@@ -51,27 +51,44 @@ function getSelectedCheckboxes(name) {
 
 function getFormData() {
   return {
-    name: `${firstNameInput.value} + ${lastNameInput.value}`,
-    email: emailInput.value,
-    family: houseSelect.value,
-    house: getSelectedRadio('family'),
-    subjects: getSelectedCheckboxes('subject'),
-    rate: getSelectedRadio('rate'),
-    obs: textarea.value };
+    name: ['Nome:', `${firstNameInput.value} ${lastNameInput.value}`],
+    email: ['Email', emailInput.value],
+    family: ['Casa', houseSelect.value],
+    house: ['Famiília', getSelectedRadio('family')],
+    subjects: ['Matérias', getSelectedCheckboxes('subject')],
+    rate: ['Avaliação', getSelectedRadio('rate')],
+    obs: ['Observações', textarea.value] };
 }
 
 function clearForm() {
   const elements = document.querySelectorAll('#evaluation-form > *');
-  console.log(elements);
   for (let i = 0; i < elements.length; i += 1) {
     elements[i].remove();
   }
+}
+
+function createDataList(data) {
+  const dataItem = document.createElement('li');
+  dataItem.innerText = `${data[0]}: ${data[1]}`;
+
+  return dataItem;
+}
+
+function renderData(data) {
+  const dataKeys = Object.keys(data);
+  const dataList = document.createElement('ul');
+
+  for (let i = 0; i < dataKeys.length; i += 1) {
+    dataList.appendChild(createDataList(data[dataKeys[i]]));
+  }
+  form.appendChild(dataList);
 }
 
 function submitForm(event) {
   event.preventDefault();
   const data = getFormData();
   clearForm();
+  renderData(data);
 }
 
 buttonLogin.addEventListener('click', checkLogin);
