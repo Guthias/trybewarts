@@ -146,21 +146,24 @@
           </label>
         </div>
       </div>
-        <div>
-          <label class="textarea evaluation-form-label">Deixe seu comentário:</label>
+      <div class="evaluation-form-input-area">
+        <label class="textarea evaluation-form-label">Deixe seu comentário:</label>
           <div>
             <textarea id="textarea" class="evaluation-form-textarea" maxlength="500"></textarea>
             <p>Caracteres restantes: <span id="counter">500</span></p>
           </div>
-          <div>
-            <label id="label-infos">Você concorda com o uso das informações acima?</label>
-            <input type="checkbox" id="agreement">
-          </div>
-          <div>
-            <button type="submit" id="submit-btn" disabled>Enviar</button>
-          </div>
-          
         </div>
+      </div>
+
+      <div class="evaluation-form-input-area">
+        <div>
+          <input type="checkbox" id="agreement">
+          <label id="label-infos">Você concorda com o uso das informações acima?</label>
+        </div>
+      </div>
+
+      <div>
+        <button id="submit-btn" type="submit" class="evaluation-button" disabled>Enviar</button>
       </div>
     </form>
     <img id="trybewarts-forms-logo" src="images/trybewarts-colored.svg">
