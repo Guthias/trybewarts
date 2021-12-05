@@ -1,3 +1,4 @@
+const form = document.getElementById('evaluation-form');
 const emailLoginInput = document.getElementById('login-email');
 const passwordLoginInput = document.getElementById('login-password');
 const buttonLogin = document.getElementById('login-button');
@@ -59,9 +60,24 @@ function getFormData() {
     obs: textarea.value };
 }
 
+function clearForm() {
+  const elements = document.querySelectorAll('#evaluation-form > *');
+  console.log(elements);
+  for (let i = 0; i < elements.length; i += 1) {
+    elements[i].remove();
+  }
+}
+
+function submitForm(event) {
+  event.preventDefault();
+  const data = getFormData();
+  clearForm();
+}
+
 buttonLogin.addEventListener('click', checkLogin);
 agreeCheckbox.addEventListener('change', changeSubmitState);
 textarea.addEventListener('keyup', () => {
   const numberOfChars = textarea.value.length;
   charCounter.innerText = 500 - numberOfChars;
 });
+buttonSubmit.addEventListener('click', submitForm);
