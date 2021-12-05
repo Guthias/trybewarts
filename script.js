@@ -50,10 +50,10 @@ function getSelectedCheckboxes(name) {
 
 function getFormData() {
   return {
-    name: ['Nome:', `${firstNameInput.value} ${lastNameInput.value}`],
+    name: ['Nome', `${firstNameInput.value} ${lastNameInput.value}`],
     email: ['Email', emailInput.value],
     family: ['Casa', houseSelect.value],
-    house: ['Famiília', getSelectedRadio('family')],
+    house: ['Família', getSelectedRadio('family')],
     subjects: ['Matérias', getSelectedCheckboxes('subject')],
     rate: ['Avaliação', getSelectedRadio('rate')],
     obs: ['Observações', textarea.value] };
