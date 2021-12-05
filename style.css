@@ -128,6 +128,11 @@ header {
   color: black;
   font-weight: 700;
   transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+.checkmark:hover {
+  background-color: rgb(169, 105, 248);
 }
 
 .avaliation-input-box input:checked ~ .checkmark {
