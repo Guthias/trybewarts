@@ -118,8 +118,8 @@ header {
 .avaliation-input-box input {
   position: absolute;
   border: none;
-  width: 0;
-  height: 0;
+  width: 1px;
+  height: 1px;
   opacity: 0;
 }
 
