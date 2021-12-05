@@ -236,3 +236,8 @@ footer {
 .evaluation-button:hover {
   background-color: rgb(62, 23, 109);
 }
+
+.evaluation-button:disabled {
+  cursor: default;
+  background-color: rgb(169, 105, 248);
+}
