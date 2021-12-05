@@ -3,6 +3,8 @@ const passwordLoginInput = document.getElementById('login-password');
 const buttonLogin = document.getElementById('login-button');
 const agreeCheckbox = document.getElementById('agreement');
 const buttonSubmit = document.getElementById('submit-btn');
+const textarea = document.getElementById('textarea');
+const charCounter = document.getElementById('counter');
 
 function checkLogin(event) {
   event.preventDefault();
@@ -22,3 +24,7 @@ function changeSubmitState() {
 
 buttonLogin.addEventListener('click', checkLogin);
 agreeCheckbox.addEventListener('change', changeSubmitState);
+textarea.addEventListener('keyup', () => {
+  const numberOfChars = textarea.value.length;
+  charCounter.innerText = 500 - numberOfChars;
+});
