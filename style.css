@@ -115,34 +115,6 @@ header {
   outline: 1px solid black;
 }
 
-.avaliation-input-box input {
-  position: absolute;
-  border: none;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-}
-
-.checkmark {
-  background-color: white;
-  color: black;
-  font-weight: 700;
-  transition: all ease-in-out 0.2s;
-  cursor: pointer;
-}
-
-.checkmark:hover {
-  background-color: rgb(169, 105, 248);
-}
-
-.avaliation-input-box input:checked ~ .checkmark {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgb(100, 44, 169);
-  color: white;
-}
-
 .evaluation-form-label {
   margin-bottom: 10px;
 }
@@ -254,4 +226,68 @@ footer {
 .evaluation-button:disabled {
   cursor: default;
   background-color: rgb(169, 105, 248);
+}
+
+
+.checkbox-area {
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  line-height: 22px;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-area input , .avaliation-input-box input {
+  position: absolute;
+  border: none;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.avaliation-input-box .checkmark {
+  background-color: white;
+  color: black;
+  font-weight: 700;
+  transition: all ease-in-out 0.2s;
+  cursor: pointer;
+}
+
+.checkbox-area .checkmark {
+  width: 22px;
+  height: 22px;
+  border: 1px solid black;
+  margin-right: 8px;
+  position: absolute;
+  left: 0;
+}
+
+.checkbox-area input:checked ~ .checkmark:before {
+  content: '';
+  background-color: white;
+  display: block;
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  transform: translate(-50% -50%);
+}
+
+.checkbox-area:hover .checkmark , .avaliation-input-box {
+  background-color: rgb(169, 105, 248);
+}
+
+.avaliation-input-box input:checked ~ .checkmark {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(100, 44, 169);
+  color: white;
+}
+
+.checkbox-area input:checked ~ .checkmark {
+  background-color: rgb(100, 44, 169);
 }
